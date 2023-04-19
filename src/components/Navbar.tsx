@@ -23,7 +23,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen
-              ? "flex fixed left-0 right-0 bottom-32 top-16 leading-7 bg-slate-200 flex-col"
+              ? "flex fixed left-0 right-0 bottom-32 top-16 leading-7 bg-slate-200 flex-col z-10"
               : "hidden  md:flex ml-10"
           } `}
         >
