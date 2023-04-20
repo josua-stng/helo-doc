@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ImageLogo from "../Image/wibu_doc_logo.png";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,9 @@ const Navbar = () => {
               : "hidden  md:flex ml-10"
           } `}
         >
+          <Link to='/'>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Beranda</h2>
+          </Link>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Artikel</h2>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Riwayat</h2>
         </div>
