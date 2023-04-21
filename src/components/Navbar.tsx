@@ -10,7 +10,7 @@ const Navbar = () => {
     setIsOpen((prevState) => !prevState);
   };
   return (
-    <div className="flex justify-between py-3 px-5 items-center bg-zinc-50 ">
+    <div className="flex justify-between py-3 px-5 items-center bg-zinc-50 sticky top-0 z-10">
       <div className="flex items-center">
         <img src={ImageLogo} alt="logo_image" />
         <button className="md:hidden  ml-2" onClick={handleToogleOpen}>
