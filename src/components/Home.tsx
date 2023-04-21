@@ -1,5 +1,6 @@
 import WibuDocContent from "../content/WibuDocContent"
 import DoctorOptions from "./DoctorOptions"
+import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 const Home =() =>{
@@ -8,7 +9,7 @@ const Home =() =>{
             <Navbar/>
             <DoctorOptions/>
             <WibuDocContent/>
-            <h1>Home Page Menu</h1>
+            <Footer/>
         </div>
     )
 }
