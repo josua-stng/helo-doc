@@ -1,5 +1,6 @@
+
 import WibuDocContent from "../content/WibuDocContent"
-import DoctorOptions from "./DoctorOptions"
+import DoctorOptions from "../option/DoctorOptions"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
