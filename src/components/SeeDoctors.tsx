@@ -9,28 +9,19 @@ import gulaDarah from "../Image/mental-health-v2.webp";
 import Swal from "sweetalert2";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import { v4 as uuidv4 } from 'uuid';
 
 const SeeDoctor = () => {
+  const doctorId= uuidv4();
+
   const getId = (id: number) => {
     listDoctor.map((doctor) => {
       if (doctor.id === id) {
-        Swal.fire({
-            title: 'Pesan Dokter Ini?',
-            text: "Apa kamu yakin?",
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya,Pesan!'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire(
-                'Selamat!',
-                `Kamu telah memesan dokter ${doctor.name}`,
-                'success'
-              )
-            }
-          })
+        Swal.fire(
+          'Success!',
+          `You booked Doctor! ${doctor.name}`,
+          'success'
+        )
       }
     });
   };
