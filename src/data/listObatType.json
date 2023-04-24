@@ -1,0 +1,212 @@
+[
+    {
+        "id":1,
+        "nama":"Panadol",
+        "image":"https://img-cdn.medkomtek.com/WCkDN8fPrxfMajX0_VvR9nzpBPI=/0x0/smart/filters:quality(75):strip_icc():format(webp)/drugs/inZewlcAUE1LDld0UNZ9e/original/0009665.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    },
+    {
+        "id":2,
+        "nama":"Bodrex",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_20201127095048359225_BODREX-20-TAB.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    }, {
+        "id":3,
+        "nama":"Paracetamol",
+        "image":"https://images.k24klik.com/product/0104k0131.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    },
+    {
+        "id":4,
+        "nama":"IbuProfen",
+        "image":"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//100/MTA-2939607/indo_indo-ibuprofen-400-mg-obat-resep-dokter-10-tablet--1-strip-_full09.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    },
+    {
+        "id":5,
+        "nama":"Aspirin",
+        "image":"https://images.k24klik.com/product/0102n0008.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    }, 
+    {
+        "id":6,
+        "nama":"Cefadroxil",
+        "image":"https://d2qjkwm11akmwu.cloudfront.net/products/427008_5-11-2020_14-18-50-1665787646.jpeg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"obat"
+    },
+
+    {
+        "id":7,
+        "nama":"Vitamin C",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_20210730044612359225_VITAMIN-C-3.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":8,
+        "nama":"Vitamin B-complex",
+        "image":"https://id-live-01.slatic.net/p/3612a6919a508b44179fdde784444a50.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":9,
+        "nama":"Vitamin D",
+        "image":"https://www.farmaku.com/artikel/wp-content/uploads/2021/10/Prove-D3-1000-300x300.png",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":10,
+        "nama":"Vitamin C",
+        "image":"https://www.farmaku.com/artikel/wp-content/uploads/2021/11/Apotek_Online_Farmaku_com_Natur_E_Nourishing_100_IU_16S-1-300x300.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":11,
+        "nama":"Vitamin K",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_20230123111852359225_NEUROBION-FORTE-1.png",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":12,
+        "nama":"Vitamin A",
+        "image":"https://images.tokopedia.net/blog-tokopedia-com/uploads/2021/02/10.-Imugard-Vitamin-Herbal-300x300.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Vitamin"
+    },
+    {
+        "id":13,
+        "nama":"Omega-3",
+        "image":"https://d2qjkwm11akmwu.cloudfront.net/products/217597_4-9-2019_11-23-10-1665805295.jpeg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":14,
+        "nama":"Probiotik",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_201810231010144677_probikid.jpeg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":15,
+        "nama":"Fish oil",
+        "image":"https://id-test-11.slatic.net/p/5dcb38a9cf313b6655fa62ac8c575686.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":16,
+        "nama":"Zinc",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_20210730050046359225_ZINC-PLUS-2.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":17,
+        "nama":"Multivitamin",
+        "image":"https://www.farmaku.com/artikel/wp-content/uploads/2020/06/Apotek_Online_Farmaku_com_Imboost_Force_Strip-300x300.jpeg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":18,
+        "nama":"Asam folat ",
+        "image":"https://apoteksarahfarma.id/wp-content/uploads/2022/10/asam-folat-324x324.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Suplemen"
+    },
+    {
+        "id":19,
+        "nama":"Creatine",
+        "image":"https://sc04.alicdn.com/kf/Uc6ba0c98185d4e3d9a5edd1e9b58e8f5U.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":20,
+        "nama":"Beta-Alanine",
+        "image":"https://images.tokopedia.net/img/cache/700/hDjmkQ/2022/2/13/b2d6a158-714a-495b-9bf7-27965c9573dd.jpg.webp",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":21,
+        "nama":"Cafein",
+        "image":"https://sc04.alicdn.com/kf/U54db4ffa4d3642289d051ccd4648bfc6j.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":22,
+        "nama":"L-Arginine",
+        "image":"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-36160356/brd-01356_obat-pria-perkasa-nutrition-l-arginine-original_full01.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":23,
+        "nama":"BCAA",
+        "image":"https://cdn1.productnation.co/stg/sites/5/Ultimate-Nutrition-BCAA-300x300.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":24,
+        "nama":"Nitrat",
+        "image":"https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//101/MTA-1881956/kimia-farma_kimia-farma-nitrokaf-retard-kapsul-obat-kesehatan--2-5-mg--10-tablet-strip-_full02.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Booster"
+    },
+    {
+        "id":25,
+        "nama":"Amoxicillin",
+        "image":"https://www.pyfa.co.id/wp-content/uploads/2020/07/Amoxicillin-Kaplet-600x600.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    },
+    {
+        "id":26,
+        "nama":"Cephalexin",
+        "image":"https://d2qjkwm11akmwu.cloudfront.net/products/3598_22-1-2019_19-29-3-1665769384.jpeg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    },
+    {
+        "id":27,
+        "nama":"Azithromycin",
+        "image":"https://s3-publishing-cmn-svc-prd.s3.ap-southeast-1.amazonaws.com/drugs/IsiVEWwTFpQvTmE7iq1ri/original/OBT0005492.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    },
+    {
+        "id":28,
+        "nama":"Levofloxacin",
+        "image":"https://www.pyfa.co.id/wp-content/uploads/2020/07/Levofloxacin.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    },
+    {
+        "id":29,
+        "nama":"Ciprofloxacin",
+        "image":"https://images.k24klik.com/product/large/apotek_online_k24klik_20211210091210359225_CIPROFLOXACIN-DEXA-500MG-TAB-100S-removebg-preview.png",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    },
+    {
+        "id":30,
+        "nama":"Doxycycline",
+        "image":"https://storage.googleapis.com/rxstorage/Product/large/Apotek_Online_Farmaku_com_Doxycycline_100_mg_Tab_KF.jpg",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, accusantium error dolore voluptas iste ab eum perspiciatis commodi fugiat, nihil soluta, corrupti laborum? Quae tenetur fugit hic pariatur veritatis amet.",
+        "type":"Antibiotik"
+    }
+]
