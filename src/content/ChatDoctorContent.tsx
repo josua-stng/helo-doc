@@ -15,7 +15,8 @@ const ChatDoctor = ({onChange,Value,onSubmit}:dataProps) => {
             placeholder="Search Doctor"
             value={Value}
             onChange={onChange}
-            className="border-2 border-gray-300 w-full h-10 pl-2 rounded-lg hover:rounded-lg"
+            className="border-2 border-gray-300 w-full h-10 pl-2 rounded-lg hover:rounded-lg focus:rounded-lg"
+            
           />
           <MagnifyingGlassIcon className="w-5 absolute right-14 md:right-24 top-1/4" />
         </div>
