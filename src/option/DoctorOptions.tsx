@@ -9,9 +9,11 @@ const DoctorOptions = () => {
       <Link to='/market' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
       Market
       </Link>
-      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">Book Doctor</button>  
+      <Link to='/chat-doctor' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
+      Chat Doctor
+      </Link>
       <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">See Hospital</button>
-      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">Chat Doctor</button>
+      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">Book Doctor</button>
     </div>
   );
 };
