@@ -11,25 +11,25 @@ const MarketOption = () => {
     
   return (
     <div>
-    <div className="grid justify-around grid-cols-3 gap-2 md:grid-cols-5 mt-4">
+    <div className="grid justify-around grid-cols-3 gap-2 md:grid-cols-5 mt-4 font-medium text-blue-700">
       <button onClick={()=> handleActiveTab("obat")}
-       className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
+       className="m-2 p-1 drop-shadow-lg bg-white  h-max-content md:h-11 hover:bg-blue-600 hover:rounded-lg hover:drop-shadow-xl  hover:text-white flex justify-center items-center">
         Obat
       </button>
       <button onClick={()=> handleActiveTab("Vitamin")}
-       className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
+       className="m-2 p-1 drop-shadow-lg bg-white h-max-content md:h-11 hover:bg-blue-600 hover:rounded-lg hover:drop-shadow-xl hover:text-white flex  justify-center items-center">
         Vitamin
       </button>
       <button onClick={() => handleActiveTab("Suplemen")}
-       className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">
+       className="m-2 p-1 drop-shadow-lg bg-white hover:bg-blue-600 hover:rounded-lg h-max-content md:h-11 hover:text-white hover:drop-shadow-xl">
        Suplemen
       </button>
       <button onClick={()=>handleActiveTab("Booster")}
-      className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">
+      className="m-2 p-1 drop-shadow-lg bg-white hover:bg-blue-600 hover:rounded-lg h-max-content md:h-11 hover:text-white hover:drop-shadow-xl">
         Booster
       </button>
       <button onClick={()=>handleActiveTab("Antibiotik")}
-      className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">
+      className="m-2 p-1 drop-shadow-lg bg-white h-max-content md:h-11 hover:bg-blue-600 hover:rounded-lg hover:drop-shadow-xl hover:text-white">
         Antibiotik
       </button>
     </div>
