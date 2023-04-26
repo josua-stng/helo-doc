@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import ChatDoctor from "../content/ChatDoctorContent";
 import Navbar from "./Navbar";
 import doctorList from "../data/listDoctor.json";
-import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
 import Footer from "./Footer";
+import DoctorChatContent from "../content/DoctorContentChatDoctor";
 const ChatDoctorPage = () => {
   const [Inputvalue, setInputValue] = useState("");
 
@@ -37,26 +37,13 @@ const ChatDoctorPage = () => {
           })
           .map((doctor) => {
             return (
-              <div
-                key={doctor.id}
-                className="drop-shadow-xl border-2 border-gray-100 text-center w-full bg-slate-50 rounded-lg flex justify-around p-5 items-center cursor-pointer hover:bg-gray-200"
-              >
-                <div>
-                  <img
-                    src={doctor.doctorImage}
-                    alt="doctor_image"
-                    className="w-24"
-                  />
-                </div>
-                <div>
-                  <p className=" font-bold md:text-xl">{doctor.name}</p>
-                  <p className="text-sm font-light">{doctor.spesialist}</p>
-                  <p className="mt-5 text-sm md:text-base">{doctor.reviews}</p>
-                </div>
-                <div>
-                  <ChatBubbleBottomCenterIcon className="w-6 text-gray-500 hover:text-gray-700" />
-                </div>
-              </div>
+              <DoctorChatContent
+              doctorId={doctor.id}
+              doctorName={doctor.name}
+              doctorImage={doctor.doctorImage}
+              doctorSpesialist={doctor.spesialist}
+              doctorReviews={doctor.reviews}
+              />
             );
           })}
       </div>
