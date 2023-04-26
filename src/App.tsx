@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import SeeDoctor from "./components/SeeDoctors";
 import Market from "./components/Market";
 import ChatDoctorPage from "./components/ChatDocter";
+import CalculatorBMI from "./components/CalculatorBMI";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/doctor-list" element={<SeeDoctor/>}/>
         <Route path="/market" element={<Market/>}/>
         <Route path="/chat-doctor" element={<ChatDoctorPage/>}/>
+        <Route path="/calculator-bmi" element={<CalculatorBMI/>}/>
       </Routes>
     </div>
   );
