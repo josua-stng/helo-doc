@@ -12,8 +12,10 @@ const DoctorOptions = () => {
       <Link to='/chat-doctor' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
       Chat Doctor
       </Link>
-      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">See Hospital</button>
-      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">Book Doctor</button>
+      <Link to='/calculator-bmi' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
+      Calculator BMI
+      </Link>
+      <button className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl">See Hospitalr</button>
     </div>
   );
 };
