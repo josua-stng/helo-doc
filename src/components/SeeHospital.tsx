@@ -1,4 +1,5 @@
 import SeeHospitalContent from "../content/SeeHospitalContent";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const SeeHospital = () => {
@@ -6,6 +7,7 @@ const SeeHospital = () => {
     <div>
       <Navbar />
       <SeeHospitalContent/>
+      <Footer/>
     </div>
   );
 };
