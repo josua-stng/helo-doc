@@ -1,0 +1,82 @@
+[
+    {
+        "id":1,
+        "nama_rs":"ASHA Clinic",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/55171_9-2-2023_13-20-2.jpeg",
+        "type_rs":"Klinik",
+        "location_rs":"Kebayoran Baru,Jaksel",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":2,
+        "nama_rs":"Alia Hospital Depok",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/834_30-3-2023_14-49-9.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Pancoran Mas, Depok",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":3,
+        "nama_rs":"Columbia Asia Hospital Medan",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/67011_22-4-2022_15-47-8.webp",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Medan,Sumut",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":4,
+        "nama_rs":"RS BIMC Kuta",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/449920_21-11-2022_10-27-10.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Kuta, Kabupaten Badung",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":5,
+        "nama_rs":"RSU Ganesha Gianyar",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/c8cf7a0a-6606-4e6e-9fef-cc389a21da32_provider_location_image_url.webp",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Sukawati, Kabupaten Gianyar",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":6,
+        "nama_rs":"RS Hermina Yogya",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/687984_9-9-2022_16-6-35.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Kecamatan Depok, Kabupaten Sleman",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":7,
+        "nama_rs":"RS Panti Rapih",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/420490_2-6-2021_13-15-36.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Gondokusuman, Kota Yogyakarta",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":8,
+        "nama_rs":"RS Teungku Fakinah",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/208375_15-12-2021_10-59-57.png",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Banda Raya, Kota Banda Aceh",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":9,
+        "nama_rs":"RS Awal Bros Batam",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/293634_14-2-2023_13-48-59.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Lubuk Baja, Kota Batam",
+        "promise_rs":"Buat Janji"
+    },
+    {
+        "id":10,
+        "nama_rs":"Eka Hospital Bekasi",
+        "image_rs":"https://d1ojs48v3n42tp.cloudfront.net/provider_location_list/664866_18-11-2022_12-30-39.jpeg",
+        "type_rs":"Rumah Sakit Umum",
+        "location_rs":"Tarumajaya, Kabupaten Bekasi",
+        "promise_rs":"Buat Janji"
+    }
+]
