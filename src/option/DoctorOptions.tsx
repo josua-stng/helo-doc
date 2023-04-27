@@ -13,7 +13,7 @@ const DoctorOptions = () => {
       Chat Doctor
       </Link>
       <Link to='/calculator-bmi' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
-      Calculate BMI
+      BMI
       </Link>
       <Link to='/see-hospital' className="m-2 p-1 drop-shadow-lg bg-slate-100 h-max-content md:h-11 hover:bg-slate-200 hover:drop-shadow-xl flex  justify-center items-center">
       See Hospital
