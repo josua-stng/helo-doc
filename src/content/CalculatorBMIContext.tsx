@@ -24,25 +24,25 @@ const CalculatorBMIContent = () => {
         );
       } else if (result > 18.5 && result < 24.9) {
         Swal.fire("Aman", "Kamu masuk ke dalam kategori Normal", "success");
-      } else if (result > 25 && result < 29.9) {
+      } else if (result >= 25 && result < 29.9) {
         Swal.fire(
           "Oopss",
           "Kamu masuk ke dalam kategori Overweight",
           "warning"
         );
-      } else if (result > 30 && result < 34.9) {
+      } else if (result >= 30 && result < 34.9) {
         Swal.fire(
           "Waduhh",
           "Kamu masuk ke dalam kategori Obesitas Kelas 1 nihh",
           "warning"
         );
-      } else if (result > 35 && result < 39.9) {
+      } else if (result >= 35 && result < 39.9) {
         Swal.fire(
           "Waduhh",
           "Kamu masuk ke dalam kategori Obesitas Kelas 2 nihh",
           "warning"
         );
-      } else {
+      } else if(result >= 40){
         Swal.fire("Warning", "Segera berolahraga", "warning");
       }
     }
