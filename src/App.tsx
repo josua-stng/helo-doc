@@ -4,6 +4,7 @@ import SeeDoctor from "./components/SeeDoctors";
 import Market from "./components/Market";
 import ChatDoctorPage from "./components/ChatDocter";
 import CalculatorBMI from "./components/CalculatorBMI";
+import SeeHospital from "./components/SeeHospital";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/market" element={<Market/>}/>
         <Route path="/chat-doctor" element={<ChatDoctorPage/>}/>
         <Route path="/calculator-bmi" element={<CalculatorBMI/>}/>
+        <Route path="/see-hospital" element={<SeeHospital/>}/>
       </Routes>
     </div>
   );
