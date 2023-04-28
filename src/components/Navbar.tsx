@@ -35,9 +35,10 @@ const Navbar = () => {
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Booked</h2>
         </div>
       </div>
-      <div className="bg-red-600 px-5 py-2 rounded-lg text-white hover:bg-red-500 cursor-pointer">
+      <Link to='/login' className="bg-red-600 px-5 py-2 rounded-lg text-white hover:bg-red-500 cursor-pointer">
         <button>Login</button>
-      </div>
+      </Link>
+     
     </div>
   );
 };
