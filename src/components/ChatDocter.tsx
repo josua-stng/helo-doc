@@ -38,6 +38,7 @@ const ChatDoctorPage = () => {
           .map((doctor) => {
             return (
               <DoctorChatContent
+              key={doctor.id}
               doctorId={doctor.id}
               doctorName={doctor.name}
               doctorImage={doctor.doctorImage}
