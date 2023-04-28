@@ -5,6 +5,8 @@ import Market from "./components/Market";
 import ChatDoctorPage from "./components/ChatDocter";
 import CalculatorBMI from "./components/CalculatorBMI";
 import SeeHospital from "./components/SeeHospital";
+import Login from "./authentication/Login";
+import SignUp from "./authentication/SignUp";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/chat-doctor" element={<ChatDoctorPage/>}/>
         <Route path="/calculator-bmi" element={<CalculatorBMI/>}/>
         <Route path="/see-hospital" element={<SeeHospital/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/sign-up" element={<SignUp/>}/>
       </Routes>
     </div>
   );
