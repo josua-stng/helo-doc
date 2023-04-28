@@ -29,13 +29,16 @@ const SignUp = () => {
     else if(!password.trim()){
         alert("password cant empty!")
     }
+    else if(username.length >8){
+      alert("username only 9 max character")
+    }
     else{
         const accountToString = JSON.stringify(getAccount);
         localStorage.setItem("account", accountToString);
         navigate("/login");
     }
   };
-
+  
   const handlePassword = () => {
     setIsPassword((prevState) => !prevState);
   };
@@ -76,9 +79,9 @@ const SignUp = () => {
                 )}
               </div>
             </div>
-            <div className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer">
-              <button type="submit">Daftar</button>
-            </div>
+    
+              <button type="submit" className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer">Daftar</button>
+        
           </form>
           <Link
             to="/login"
