@@ -1,14 +1,25 @@
 import { useState } from "react";
 import ImageLogo from "../Image/wibu_doc_logo.png";
-import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Bars4Icon, XMarkIcon, PowerIcon } from "@heroicons/react/24/solid";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate()
+  const getLocalAccount = localStorage.getItem("account");
+  let account: { username: string; password: string } | null = null;
+  if (getLocalAccount !== null) {
+    account = JSON.parse(getLocalAccount);
+  }
 
   const handleToogleOpen = () => {
     setIsOpen((prevState) => !prevState);
   };
+
+  const logOut =()=>{
+    localStorage.removeItem("account");
+    navigate("/")
+  }
   return (
     <div className="flex justify-between py-3 px-5 items-center bg-zinc-50 sticky top-0 z-10">
       <div className="flex items-center">
@@ -28,17 +39,28 @@ const Navbar = () => {
               : "hidden  md:flex ml-10"
           } `}
         >
-          <Link to='/'>
-          <h2 className="ml-5 hover:text-red-600 cursor-pointer">Beranda</h2>
+          <Link to="/">
+            <h2 className="ml-5 hover:text-red-600 cursor-pointer">Beranda</h2>
           </Link>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Keranjang</h2>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Booked</h2>
         </div>
       </div>
-      <Link to='/login' className="bg-red-600 px-5 py-2 rounded-lg text-white hover:bg-red-500 cursor-pointer">
-        <button>Login</button>
-      </Link>
-     
+      {getLocalAccount === null ? (
+        <Link
+          to="/login"
+          className="bg-red-600 px-5 py-2 rounded-lg text-white hover:bg-red-500 cursor-pointer"
+        >
+          <button>Login</button>
+        </Link>
+      ) : (
+        <div className="flex">
+          <PowerIcon onClick={logOut} className="w-7 mr-3 sm:mr-5 hover:cursor-pointer" />
+          <p className="bg-blue-600 px-5 py-2 rounded-lg text-white hover:bg-blue-700 cursor-pointer">
+            {account?.username}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
