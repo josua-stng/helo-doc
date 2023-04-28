@@ -14,21 +14,25 @@ const Login = () => {
   const navigate = useNavigate();
 
   const getAccount = localStorage.getItem("account");
-  let account: { username: string, password: string } | null = null;
+  let account: { username: string; password: string } | null = null;
 
   if (getAccount !== null) {
     account = JSON.parse(getAccount);
   }
   const isAccount = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if(username !== account?.username && password!== account?.password){
-        alert("username && password wrong");
-    }
-    else if(username !== account?.username || password!== account?.password){
-        alert("username or password wrong");
-    }
-    else if(username === account?.username && password=== account?.password){
-        navigate("/");
+    if (username !== account?.username && password !== account?.password) {
+      alert("username && password wrong");
+    } else if (
+      username !== account?.username ||
+      password !== account?.password
+    ) {
+      alert("username or password wrong");
+    } else if (
+      username === account?.username &&
+      password === account?.password
+    ) {
+      navigate("/");
     }
   };
 
@@ -72,9 +76,13 @@ const Login = () => {
                 )}
               </div>
             </div>
-            <div className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer">
-              <button type="submit">Login</button>
-            </div>
+
+            <button
+              type="submit"
+              className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer"
+            >
+              Login
+            </button>
           </form>
           <Link
             to="/sign-up"
