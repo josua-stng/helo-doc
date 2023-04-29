@@ -7,19 +7,27 @@ import CalculatorBMI from "./components/CalculatorBMI";
 import SeeHospital from "./components/SeeHospital";
 import Login from "./authentication/Login";
 import SignUp from "./authentication/SignUp";
+import ProtectRoute from "./authorization/ProtectRoute";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/doctor-list" element={<SeeDoctor/>}/>
-        <Route path="/market" element={<Market/>}/>
-        <Route path="/chat-doctor" element={<ChatDoctorPage/>}/>
-        <Route path="/calculator-bmi" element={<CalculatorBMI/>}/>
-        <Route path="/see-hospital" element={<SeeHospital/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/sign-up" element={<SignUp/>}/>
+        <Route path="/doctor-list" element={<SeeDoctor />} />
+        <Route path="/market" element={<Market />} />
+        <Route
+          path="/chat-doctor"
+          element={
+            <ProtectRoute>
+              <ChatDoctorPage />
+            </ProtectRoute>
+          }
+        />
+        <Route path="/calculator-bmi" element={<CalculatorBMI />} />
+        <Route path="/see-hospital" element={<SeeHospital />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
     </div>
   );
