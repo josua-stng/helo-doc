@@ -5,6 +5,7 @@ import {
   EyeSlashIcon,
 } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -22,12 +23,12 @@ const Login = () => {
   const isAccount = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (username !== account?.username && password !== account?.password) {
-      alert("username && password wrong");
+      Swal.fire("Oopss!", "Username & Password wrong!", "warning");
     } else if (
       username !== account?.username ||
       password !== account?.password
     ) {
-      alert("username or password wrong");
+      Swal.fire("Oopss!", "Username or Password wrong!", "info");
     } else if (
       username === account?.username &&
       password === account?.password
@@ -42,7 +43,10 @@ const Login = () => {
 
   return (
     <div className="border-2 border-black  bg-gray-200">
-      <div className="flex justify-center items-center h-[100vh] m-auto  ">
+      <Link to="/" className="bg-gray-500 text-slate-100 px-5 py-2 rounded-md ml-5 absolute mt-5 hover:bg-gray-600">
+        Back
+      </Link>
+      <div className="flex justify-center items-center h-[100vh] m-auto ">
         <div className="border-2 border-black rounded-lg p-6 sm:p-10  bg-white">
           <p className="text-2xl font-serif font-bold mb-7 text-center ">
             Login
@@ -54,6 +58,7 @@ const Login = () => {
                 type="text"
                 className="border-b-2 border-gray-400 h-14 rounded-md pl-12"
                 placeholder="Type your Username"
+                value={username}
                 onChange={(event) => setUsername(event.target.value)}
               />
             </div>
@@ -65,6 +70,7 @@ const Login = () => {
                   type={ispassword ? "text" : "password"}
                   className="border-b-2 border-gray-400 h-14 rounded-md pl-12"
                   placeholder="Type your Password"
+                  value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
