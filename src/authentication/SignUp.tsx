@@ -5,6 +5,7 @@ import {
   EyeSlashIcon,
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import Swal from "sweetalert2";
 import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -13,32 +14,27 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const createAccount = (event:React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+  const createAccount = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const getAccount = {
-      username: username,
-      password: password,
+      username,
+      password,
     };
-    if(!username.trim() && !password.trim()){
-        alert('username && password cant empty!')
-    }
-    else if(!username.trim()){
-        alert("username cant empy!")
-    }
-
-    else if(!password.trim()){
-        alert("password cant empty!")
-    }
-    else if(username.length >8){
-      alert("username only 9 max character")
-    }
-    else{
-        const accountToString = JSON.stringify(getAccount);
-        localStorage.setItem("account", accountToString);
-        navigate("/login");
+    if (!username.trim() && !password.trim()) {
+      Swal.fire("Oopss!", "Username && Password cant empty!", "warning");
+    } else if (!username.trim()) {
+      Swal.fire("Oopss!", "Username cant empty!", "warning");
+    } else if (!password.trim()) {
+      Swal.fire("Oopss!", "Password cant empty!", "warning");
+    } else if (username.length > 7) {
+      Swal.fire("Oopss!", "Username only 7 max character", "warning");
+    } else {
+      const accountToString = JSON.stringify(getAccount);
+      localStorage.setItem("account", accountToString);
+      navigate("/login");
     }
   };
-  
+
   const handlePassword = () => {
     setIsPassword((prevState) => !prevState);
   };
@@ -57,6 +53,7 @@ const SignUp = () => {
                 type="text"
                 className="border-b-2 border-gray-400 h-14 rounded-md pl-12"
                 placeholder="Type your Username"
+                value={username}
                 onChange={(event) => setUsername(event.target.value)}
               />
             </div>
@@ -68,6 +65,7 @@ const SignUp = () => {
                   type={ispassword ? "text" : "password"}
                   className="border-b-2 border-gray-400 h-14 rounded-md pl-12"
                   placeholder="Type your Password"
+                  value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
@@ -79,9 +77,13 @@ const SignUp = () => {
                 )}
               </div>
             </div>
-    
-              <button type="submit" className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer">Daftar</button>
-        
+
+            <button
+              type="submit"
+              className="bg-cyan-600 w-full text-white mt-24 p-2 rounded-lg mb-4 cursor-pointer"
+            >
+              Sign Up
+            </button>
           </form>
           <Link
             to="/login"
