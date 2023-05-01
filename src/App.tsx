@@ -8,6 +8,7 @@ import SeeHospital from "./components/SeeHospital";
 import Login from "./authentication/Login";
 import SignUp from "./authentication/SignUp";
 import ProtectRoute from "./authorization/ProtectRoute";
+import NotFoundComponent from "./error/NotFoundPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/see-hospital" element={<SeeHospital />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
+        <Route path="*" element={<NotFoundComponent/>}/>
       </Routes>
     </div>
   );
