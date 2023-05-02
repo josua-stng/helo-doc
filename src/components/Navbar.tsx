@@ -5,7 +5,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const getLocalAccount = localStorage.getItem("account");
   let account: { username: string; password: string } | null = null;
   if (getLocalAccount !== null) {
@@ -16,10 +16,10 @@ const Navbar = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const logOut =()=>{
+  const logOut = () => {
     localStorage.removeItem("account");
-    navigate("/")
-  }
+    navigate("/");
+  };
   return (
     <div className="flex justify-between py-3 px-5 items-center bg-zinc-50 sticky top-0 z-10">
       <div className="flex items-center">
@@ -42,8 +42,13 @@ const Navbar = () => {
           <Link to="/">
             <h2 className="ml-5 hover:text-red-600 cursor-pointer">Beranda</h2>
           </Link>
+          <Link
+            to="/booked-doctor"
+            className="ml-5 hover:text-red-600 cursor-pointer"
+          >
+            Booked
+          </Link>
           <h2 className="ml-5 hover:text-red-600 cursor-pointer">Keranjang</h2>
-          <h2 className="ml-5 hover:text-red-600 cursor-pointer">Booked</h2>
         </div>
       </div>
       {getLocalAccount === null ? (
@@ -55,7 +60,10 @@ const Navbar = () => {
         </Link>
       ) : (
         <div className="flex">
-          <PowerIcon onClick={logOut} className="w-7 mr-3 sm:mr-5 hover:cursor-pointer" />
+          <PowerIcon
+            onClick={logOut}
+            className="w-7 mr-3 sm:mr-5 hover:cursor-pointer"
+          />
           <p className="bg-blue-600 px-5 py-2 rounded-lg text-white hover:bg-blue-700 cursor-pointer">
             {account?.username}
           </p>
