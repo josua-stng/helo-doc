@@ -9,6 +9,7 @@ import Login from "./authentication/Login";
 import SignUp from "./authentication/SignUp";
 import ProtectRoute from "./authorization/ProtectRoute";
 import NotFoundComponent from "./error/NotFoundPage";
+import DoctorBooked from "./components/DoctorBooked";
 
 function App() {
   return (
@@ -27,9 +28,10 @@ function App() {
         />
         <Route path="/calculator-bmi" element={<CalculatorBMI />} />
         <Route path="/see-hospital" element={<SeeHospital />} />
+        <Route path="/booked-doctor" element={<DoctorBooked />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="*" element={<NotFoundComponent/>}/>
+        <Route path="*" element={<NotFoundComponent />} />
       </Routes>
     </div>
   );
