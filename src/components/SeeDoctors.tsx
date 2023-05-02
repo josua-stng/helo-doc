@@ -9,22 +9,46 @@ import gulaDarah from "../Image/mental-health-v2.webp";
 import Swal from "sweetalert2";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import { useEffect, useState } from "react";
 
+interface Doctor {
+  id: string;
+  name: string;
+  doctorImage: string;
+  spesialist: string;
+}
 const SeeDoctor = () => {
-  const doctorId= uuidv4();
+  const [doctorCart, setDoctorCart] = useState<Doctor[]>([]);
+
+  const doctorId = uuidv4();
 
   const getId = (id: number) => {
-    listDoctor.map((doctor) => {
+    listDoctor.forEach((doctor) => {
       if (doctor.id === id) {
-        Swal.fire(
-          'Success!',
-          `You booked Doctor! ${doctor.name}`,
-          'success'
-        )
+        let getDoctor: Doctor = {
+          id: doctorId,
+          name: doctor.name,
+          doctorImage: doctor.doctorImage,
+          spesialist: doctor.spesialist,
+        };
+        const newCartDoctor = [...doctorCart, getDoctor];
+        setDoctorCart(newCartDoctor);
+        localStorage.setItem("doctor", JSON.stringify(newCartDoctor));
+        Swal.fire("Success!", `You booked Doctor! ${doctor.name}`, "success");
       }
     });
   };
+
+  const handleDataDoctor = () => {
+    const storedDoctors = localStorage.getItem("doctor");
+    if (storedDoctors) {
+      setDoctorCart(JSON.parse(storedDoctors));
+    }
+  };
+  useEffect(() => {
+    handleDataDoctor();
+  }, []);
   return (
     <div>
       <Navbar />
@@ -61,7 +85,11 @@ const SeeDoctor = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center p-2 gap-3 mt-5 ">
         {listDoctor.map((doctors) => {
           return (
-            <Tippy content="Pesan Dokter" className="text-base font-serif bg-red-500 rounded-lg"  key={doctors.id}>
+            <Tippy
+              content="Pesan Dokter"
+              className="text-base font-serif bg-red-500 rounded-lg"
+              key={doctors.id}
+            >
               <div
                 onClick={() => getId(doctors.id)}
                 className="bg-gray-200 w-full m-auto flex justify-center items-center text-center rounded-lg cursor-pointer hover:bg-gray-100 pt-3 pb-3"
