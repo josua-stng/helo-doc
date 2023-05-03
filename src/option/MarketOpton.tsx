@@ -35,7 +35,7 @@ const MarketOption = () => {
     </div>
 
         <div>
-            {activeTab ==="obat" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10'>
+            {activeTab ==="obat" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10 cursor-pointer'>
                 {listObat.filter(obat => obat.type==="obat").map((obat)=>{
                     return(
                         <div key={obat.id} className='border-2 border-gray-300 w-full p-5 hover:drop-shadow-lg rounded-lg'>
@@ -46,7 +46,7 @@ const MarketOption = () => {
                     )
                 })}
                 </div>}
-                {activeTab ==="Vitamin" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10'>
+                {activeTab ==="Vitamin" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10 cursor-pointer'>
                 {listObat.filter(obat => obat.type==="Vitamin").map((obat)=>{
                     return(
                         <div key={obat.id} className='border-2 border-gray-300 w-full p-5 hover:drop-shadow-lg rounded-lg'>
@@ -57,7 +57,7 @@ const MarketOption = () => {
                     )
                 })}
                 </div>}
-                {activeTab ==="Suplemen" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10'>
+                {activeTab ==="Suplemen" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10 cursor-pointer'>
                 {listObat.filter(obat => obat.type==="Suplemen").map((obat)=>{
                     return(
                         <div key={obat.id} className='border-2 border-gray-300 w-full p-5 hover:drop-shadow-lg rounded-lg'>
@@ -68,7 +68,7 @@ const MarketOption = () => {
                     )
                 })}
                 </div>}
-                {activeTab ==="Booster" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10'>
+                {activeTab ==="Booster" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10 cursor-pointer'>
                 {listObat.filter(obat => obat.type==="Booster").map((obat)=>{
                     return(
                         <div key={obat.id} className='border-2 border-gray-300 w-full p-5 hover:drop-shadow-lg rounded-lg'>
@@ -79,7 +79,7 @@ const MarketOption = () => {
                     )
                 })}
                 </div>}
-                {activeTab ==="Antibiotik" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10'>
+                {activeTab ==="Antibiotik" && <div className='grid sm:grid-cols-2 mt-5 gap-10 p-7 sm:p-10 cursor-pointer'>
                 {listObat.filter(obat => obat.type==="Antibiotik").map((obat)=>{
                     return(
                         <div key={obat.id} className='border-2 border-gray-300 w-full p-5 hover:drop-shadow-lg rounded-lg'>
