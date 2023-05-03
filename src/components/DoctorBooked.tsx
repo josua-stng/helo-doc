@@ -69,11 +69,12 @@ const DoctorBooked = () => {
                         <p className="pt-5">{doctor.spesialist}</p>
                       </div>
                     </div>
-                    <div className="mt-24 bg-amber-600 px-5 py-2  rounded-lg text-white hover:bg-amber-700">
-                      <button onClick={() => cancelBookDoctor(doctor.id)}>
-                        Cancel
-                      </button>
-                    </div>
+                    <button
+                      className="mt-24 bg-amber-600 px-5 py-2  rounded-lg text-white hover:bg-amber-700"
+                      onClick={() => cancelBookDoctor(doctor.id)}
+                    >
+                      Cancel
+                    </button>
                   </div>
                 );
               }
