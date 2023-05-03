@@ -16,8 +16,16 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/doctor-list" element={<SeeDoctor />} />
         <Route path="/market" element={<Market />} />
+
+        <Route
+          path="/doctor-list"
+          element={
+            <ProtectRoute>
+              <SeeDoctor />
+            </ProtectRoute>
+          }
+        />
         <Route
           path="/chat-doctor"
           element={
@@ -26,9 +34,16 @@ function App() {
             </ProtectRoute>
           }
         />
+        <Route
+          path="/booked-doctor"
+          element={
+            <ProtectRoute>
+              <DoctorBooked />
+            </ProtectRoute>
+          }
+        />
         <Route path="/calculator-bmi" element={<CalculatorBMI />} />
         <Route path="/see-hospital" element={<SeeHospital />} />
-        <Route path="/booked-doctor" element={<DoctorBooked />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="*" element={<NotFoundComponent />} />
