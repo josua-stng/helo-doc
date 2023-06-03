@@ -1,6 +1,45 @@
+import { useEffect, useState } from "react";
 import listHospital from "../data/listHospital.json";
+import Swal from "sweetalert2";
+
+type Hospital = {
+  id: number,
+  hospitalName: string,
+  hospitalImage: string,
+  hospitalType: string,
+  hospitalLocation: string,
+  hospitalPromise: string
+}
 
 const SeeHospitalContent = () => {
+  const [hospitalCart, setHospitalCart] = useState<Hospital[]>([]);
+  const bookHospital = (id: number) => {
+    listHospital.forEach((hospital) => {
+      if (hospital.id === id) {
+        const setHospital = {
+          id: hospital.id,
+          hospitalName: hospital.nama_rs,
+          hospitalImage: hospital.image_rs,
+          hospitalType: hospital.type_rs,
+          hospitalLocation: hospital.location_rs,
+          hospitalPromise: hospital.promise_rs
+        }
+        const getHospital = [...hospitalCart, setHospital];
+        setHospitalCart(getHospital);
+        localStorage.setItem("hospital", JSON.stringify(getHospital))
+        Swal.fire("Success!", `You booked Hospital ${hospital.nama_rs}`, "success");
+      }
+    })
+  }
+  const handleDataHospital = () => {
+    const storedHospital = localStorage.getItem("hospital");
+    if (storedHospital) {
+      setHospitalCart(JSON.parse(storedHospital))
+    }
+  }
+  useEffect(() => {
+    handleDataHospital();
+  }, [])
   return (
     <div>
       <div className="mt-5 mx-10">
@@ -36,9 +75,8 @@ const SeeHospitalContent = () => {
                 </div>
               </div>
 
-              <div className="text-center mt-4 bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer">
-                <p>{hospital.promise_rs}</p>
-              </div>
+              <button className="text-center mt-4 bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer" onClick={() => bookHospital(hospital.id)}>{hospital.promise_rs}</button>
+
             </div>
           );
         })}
