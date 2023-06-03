@@ -48,7 +48,9 @@ const Navbar = () => {
           >
             Booked
           </Link>
-          <h2 className="ml-5 hover:text-red-600 cursor-pointer">Keranjang</h2>
+          <Link
+          to="/booked-hospital"
+          className="ml-5 hover:text-red-600 cursor-pointer">Hospital</Link>
         </div>
       </div>
       {getLocalAccount === null ? (
