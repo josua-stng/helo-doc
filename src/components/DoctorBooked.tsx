@@ -29,7 +29,6 @@ const DoctorBooked = () => {
     localStorage.setItem("doctor", JSON.stringify(updateCardDoctor));
     setDoctorCart(updateCardDoctor);
   };
-  console.log(doctorCart);
 
   return (
     <div>
