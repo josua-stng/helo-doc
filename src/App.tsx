@@ -10,6 +10,7 @@ import SignUp from "./authentication/SignUp";
 import ProtectRoute from "./authorization/ProtectRoute";
 import NotFoundComponent from "./error/NotFoundPage";
 import DoctorBooked from "./components/DoctorBooked";
+import HospitalBooked from "./components/HospitalBooked";
 
 function App() {
   return (
@@ -41,6 +42,14 @@ function App() {
               <DoctorBooked />
             </ProtectRoute>
           }
+        />
+        <Route
+        path="/booked-hospital"
+        element={
+          <ProtectRoute>
+            <HospitalBooked/>
+          </ProtectRoute>
+        }
         />
         <Route path="/calculator-bmi" element={<CalculatorBMI />} />
         <Route path="/see-hospital" element={<SeeHospital />} />
