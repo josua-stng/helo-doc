@@ -33,12 +33,9 @@ const DoctorBooked = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="text-center mt-5 text-4xl font-bold font-mono">
-        Booking Doctor
-      </h1>
       {doctorCart.length === 0 ? (
-        <div className="text-center  mt-24">
-          <p className="mb-5 font-bold text-lg">doctor's orders are empty</p>
+        <div className="text-center mt-24">
+          <p className="mb-5 font-bold text-lg">Doctor's orders are empty</p>
           <ExclamationCircleIcon className="w-44 m-auto text-red-500" />
         </div>
       ) : (
@@ -48,36 +45,36 @@ const DoctorBooked = () => {
         {doctorCart === null
           ? ""
           : doctorCart.map(
-              (doctor: {
-                id: string;
-                name: string;
-                spesialist: string;
-                doctorImage: string;
-              }) => {
-                return (
-                  <div
-                    key={doctor.id}
-                    className="flex border-2 border-gray-300 p-5 justify-between items-center rounded-lg cursor-pointer hover:shadow-lg "
-                  >
-                    <div className="flex items-center">
-                      <div>
-                        <img src={doctor.doctorImage} alt="" />
-                      </div>
-                      <div className="px-5 font-sans">
-                        <p className="font-bold">{doctor.name}</p>
-                        <p className="pt-5">{doctor.spesialist}</p>
-                      </div>
+            (doctor: {
+              id: string;
+              name: string;
+              spesialist: string;
+              doctorImage: string;
+            }) => {
+              return (
+                <div
+                  key={doctor.id}
+                  className="flex border-2 border-gray-300 p-5 justify-between items-center rounded-lg cursor-pointer hover:shadow-lg "
+                >
+                  <div className="flex items-center">
+                    <div>
+                      <img src={doctor.doctorImage} alt="" />
                     </div>
-                    <button
-                      className="mt-24 bg-amber-600 px-5 py-2  rounded-lg text-white hover:bg-amber-700"
-                      onClick={() => cancelBookDoctor(doctor.id)}
-                    >
-                      Cancel
-                    </button>
+                    <div className="px-5 font-sans">
+                      <p className="font-bold">{doctor.name}</p>
+                      <p className="pt-5">{doctor.spesialist}</p>
+                    </div>
                   </div>
-                );
-              }
-            )}
+                  <button
+                    className="mt-24 bg-amber-600 px-5 py-2  rounded-lg text-white hover:bg-amber-700"
+                    onClick={() => cancelBookDoctor(doctor.id)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              );
+            }
+          )}
       </div>
     </div>
   );
