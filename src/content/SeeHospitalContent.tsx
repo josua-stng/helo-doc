@@ -14,23 +14,30 @@ type Hospital = {
 const SeeHospitalContent = () => {
   const [hospitalCart, setHospitalCart] = useState<Hospital[]>([]);
   const bookHospital = (id: number) => {
-    listHospital.forEach((hospital) => {
-      if (hospital.id === id) {
-        const setHospital = {
-          id: hospital.id,
-          hospitalName: hospital.nama_rs,
-          hospitalImage: hospital.image_rs,
-          hospitalType: hospital.type_rs,
-          hospitalLocation: hospital.location_rs,
-          hospitalPromise: hospital.promise_rs
-        }
-        const getHospital = [...hospitalCart, setHospital];
-        setHospitalCart(getHospital);
-        localStorage.setItem("hospital", JSON.stringify(getHospital))
-        Swal.fire("Success!", `You booked Hospital ${hospital.nama_rs}`, "success");
+
+    const isHospitalAlreadyBooked = hospitalCart.some((hospital) => hospital.id === id)
+    if (isHospitalAlreadyBooked) {
+      Swal.fire("Failed!", `Hospital already booked`, "error");
+      return;
+    }
+
+    const bookedHospital = listHospital.find((hospital) => hospital.id === id);
+    if (bookedHospital) {
+      const setHospital = {
+        id: bookedHospital.id,
+        hospitalName: bookedHospital.nama_rs,
+        hospitalImage: bookedHospital.image_rs,
+        hospitalType: bookedHospital.type_rs,
+        hospitalLocation: bookedHospital.location_rs,
+        hospitalPromise: bookedHospital.promise_rs
       }
-    })
+      const getHospital = [...hospitalCart, setHospital];
+      setHospitalCart(getHospital);
+      localStorage.setItem("hospital", JSON.stringify(getHospital))
+      Swal.fire("Success!", `You booked Hospital ${bookedHospital.nama_rs}`, "success");
+    }
   }
+
   const handleDataHospital = () => {
     const storedHospital = localStorage.getItem("hospital");
     if (storedHospital) {
@@ -75,7 +82,7 @@ const SeeHospitalContent = () => {
                 </div>
               </div>
 
-              <button className="text-center mt-4 bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer" onClick={() => bookHospital(hospital.id)}>{hospital.promise_rs}</button>
+              <button className="text-center mt-4 bg-red-200 rounded-lg p-2 w-full sm:w-32 hover:bg-red-400 cursor-pointer" onClick={() => bookHospital(hospital.id)}>{hospital.promise_rs}</button>
 
             </div>
           );
