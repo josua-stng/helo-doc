@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from './Navbar';
+import { ExclamationCircleIcon } from '@heroicons/react/24/solid';
 type Hospital = {
   id: number,
   hospitalName: string,
@@ -20,51 +21,60 @@ const HospitalBooked = () => {
 
   const cancelHospital = (id: number) => {
     const filterHospital = hospitalCart.filter((hospital) => hospital.id !== id)
-    localStorage.setItem('hospital',JSON.stringify(filterHospital))
+    localStorage.setItem('hospital', JSON.stringify(filterHospital))
     setHospitalCart(filterHospital);
-  } 
-  
+  }
+
   useEffect(() => {
     if (getHospitalBook !== null) {
       setHospitalCart(getHospitalBook);
     }
   }, []);
 
+
   return (
     <div>
       <Navbar />
-      <div className="grid md:grid-cols-2 p-5 gap-2">
-        {hospitalCart.map((hospital) => {
-          return (
-            <div
-              key={hospital.id}
-              className="sm:flex border-2 border-gray-200 p-5 items-end justify-between hover:shadow-lg cursor-pointer rounded-lg"
-            >
-              <div className="flex  items-center">
-                <div>
-                  <img
-                    src={hospital.hospitalImage}
-                    className="w-32 rounded-lg"
-                    alt=""
-                  />
-                </div>
+      {hospitalCart.length === 0 ?
+        (
+          <div className="text-center mt-24">
+            <p className="mb-5 font-bold text-lg">Hospital's orders are empty</p>
+            <ExclamationCircleIcon className="w-44 m-auto text-red-500" />
+          </div>
+        )
+        :
+        (
+          <div className="grid md:grid-cols-2 p-5 gap-2">
+            {hospitalCart.map((hospital) => {
+              return (
+                <div
+                  key={hospital.id}
+                  className="sm:flex border-2 border-gray-200 p-5 items-end justify-between hover:shadow-lg cursor-pointer rounded-lg"
+                >
+                  <div className="flex  items-center">
+                    <div>
+                      <img
+                        src={hospital.hospitalImage}
+                        className="w-32 rounded-lg"
+                        alt=""
+                      />
+                    </div>
 
-                <div className="ml-5 ">
-                  <h2 className="font-bold tex w-full">{hospital.hospitalName}</h2>
-                  <p>{hospital.hospitalType}</p>
-                  <p className="mt-5 text-sm  text-gray-500">
-                    {hospital.hospitalLocation}
-                  </p>
-                </div>
-              </div>
+                    <div className="ml-5 ">
+                      <h2 className="font-bold tex w-full">{hospital.hospitalName}</h2>
+                      <p>{hospital.hospitalType}</p>
+                      <p className="mt-5 text-sm  text-gray-500">
+                        {hospital.hospitalLocation}
+                      </p>
+                    </div>
+                  </div>
 
-              <button className="text-center mt-4 w-full sm:w-max sm:px-5  bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer" onClick={() => cancelHospital(hospital.id)}>Cancel</button>
-              {/* <div className="text-center mt-4 bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer">
-              </div> */}
-            </div>
-          );
-        })}
-      </div>
+                  <button className="text-center mt-4 w-full sm:w-max sm:px-5  bg-red-200 rounded-lg p-2 md:w-32 hover:bg-red-400 cursor-pointer" onClick={() => cancelHospital(hospital.id)}>Cancel</button>
+                </div>
+              );
+            })}
+          </div>
+        )}
     </div>
   );
 };
