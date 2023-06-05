@@ -9,11 +9,10 @@ import gulaDarah from "../Image/mental-health-v2.webp";
 import Swal from "sweetalert2";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 
 interface Doctor {
-  id: string;
+  id: number;
   name: string;
   doctorImage: string;
   spesialist: string;
@@ -21,23 +20,26 @@ interface Doctor {
 const SeeDoctor = () => {
   const [doctorCart, setDoctorCart] = useState<Doctor[]>([]);
 
-  const doctorId = uuidv4();
-
   const getId = (id: number) => {
-    listDoctor.forEach((doctor) => {
-      if (doctor.id === id) {
-        let getDoctor: Doctor = {
-          id: doctorId,
-          name: doctor.name,
-          doctorImage: doctor.doctorImage,
-          spesialist: doctor.spesialist,
-        };
-        const newCartDoctor = [...doctorCart, getDoctor];
-        setDoctorCart(newCartDoctor);
-        localStorage.setItem("doctor", JSON.stringify(newCartDoctor));
-        Swal.fire("Success!", `You booked Doctor! ${doctor.name}`, "success");
-      }
-    });
+    const isDoctorAlreadyBooked = doctorCart.some((doctor) => doctor.id === id);
+    if (isDoctorAlreadyBooked) {
+      Swal.fire("Error!", "Doctor Already booked.", "error");
+      return;
+    }
+
+    const selectedDoctor = listDoctor.find((doctor) => doctor.id === id);
+    if (selectedDoctor) {
+      const getDoctor: Doctor = {
+        id: selectedDoctor.id,
+        name: selectedDoctor.name,
+        doctorImage: selectedDoctor.doctorImage,
+        spesialist: selectedDoctor.spesialist,
+      };
+      const newCartDoctor = [...doctorCart, getDoctor];
+      setDoctorCart(newCartDoctor);
+      localStorage.setItem("doctor", JSON.stringify(newCartDoctor));
+      Swal.fire("Success!", `Anda telah memesan Dokter ${selectedDoctor.name}!`, "success");
+    }
   };
 
   const handleDataDoctor = () => {
