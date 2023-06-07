@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ImageLogo from "../Image/wibu_doc_logo.png";
 import { Bars4Icon, XMarkIcon, PowerIcon } from "@heroicons/react/24/solid";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +17,8 @@ const Navbar = () => {
   };
 
   const logOut = () => {
+    localStorage.removeItem("doctor");
+    localStorage.removeItem("hospital");
     localStorage.removeItem("account");
     navigate("/");
   };
