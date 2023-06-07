@@ -51,8 +51,15 @@ function App() {
           </ProtectRoute>
         }
         />
+        <Route 
+        path="/see-hospital" 
+        element={
+          <ProtectRoute>
+            <SeeHospital/>
+          </ProtectRoute>
+        } 
+        />
         <Route path="/calculator-bmi" element={<CalculatorBMI />} />
-        <Route path="/see-hospital" element={<SeeHospital />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="*" element={<NotFoundComponent />} />
