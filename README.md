@@ -1,6 +1,6 @@
-# Wibu Doc
+# Helo Doc
 
-wibu doc ​​​​is a website like a health website in general that displays various health products and various kinds of doctors
+helo doc ​​​​is a website like a health website in general that displays various health products and various kinds of doctors
 
 ### Tech Stack
 + React Js
