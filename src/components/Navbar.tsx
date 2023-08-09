@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ImageLogo from "../Image/wibu_doc_logo.png";
+
+import ImageLogo from "../Image/helo_doc_logo.png"
 import { Bars4Icon, XMarkIcon, PowerIcon } from "@heroicons/react/24/solid";
 import { Link, useNavigate } from "react-router-dom";
 

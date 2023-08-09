@@ -1,9 +1,9 @@
-import wibuDocLogo from '../Image/wibu_doc_logo.png'
+import helloDocLogo from "../Image/helo_doc_logo.png"
 const Footer =() =>{
     return(
         <div className='p-8 bg-green-500 pl-10 text-white'>
             <div className='ml-3'>
-            <img src={wibuDocLogo} alt="wibu_doc_logo" />
+            <img src={helloDocLogo} alt="wibu_doc_logo" />
             <h2 className='font-bold mt-4 mb-4'>Site Map</h2>
 
             <div className='md:flex justify-between '>

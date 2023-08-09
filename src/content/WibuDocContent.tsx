@@ -6,7 +6,7 @@ const WibuDocContent =() =>{
            <div className='grid sm:grid-cols-2 lg:grid-cols-3  justify-center items-center p-5 gap-5 text-justify'>
             <div className='border-2 border-gray-300 p-5 rounded-lg cursor-pointer hover:drop-shadow-lg'>
                 <img src={DashboardContentPage} alt="" className='mx-auto'/>
-                <p className='mt-2 lg:mt-4'>Kini di Wibu Doc menawarkan untuk mengecek kondisi kesehatan terkait dengan Covid - 19 dan bisa meminimalisir terkena Covid -19,serta bisa melakukan konsultasi terkait penyakit tersebut</p>    
+                <p className='mt-2 lg:mt-4'>Kini di Helo Doc menawarkan untuk mengecek kondisi kesehatan terkait dengan Covid - 19 dan bisa meminimalisir terkena Covid -19,serta bisa melakukan konsultasi terkait penyakit tersebut</p>    
             </div>
             <div className='border-2 border-gray-300 p-5 rounded-lg cursor-pointer hover:drop-shadow-lg'>
                 <img src={DashboardContentPage} alt="" className='mx-auto' />
